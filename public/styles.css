@@ -15,6 +15,7 @@ html {
 
 body {
     font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: rgb(251, 249, 245);
@@ -36,4 +37,15 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
     isolation: isolate;
+}
+
+/* Message card */
+
+.message-container {
+    border: 2px solid black;
+}
+
+.message-header {
+    display: flex;
+    flex-direction: row;
 }
