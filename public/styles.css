@@ -18,7 +18,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    background-color: rgb(251, 249, 245);
+    background-color: white;
 }
 
 img, picture, video, canvas, svg {
@@ -39,13 +39,108 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 }
 
+/* General */
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    background: linear-gradient(to right, #950186, #cf027a);
+    padding: 0.5rem 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.header-container h2 {
+    font-size: 1.3rem;
+}
+
+/* Index view */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 1rem;
+    width: 90%;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.main-link-button {
+    color: white;
+    background-color: #cf027a;
+    text-decoration: none;
+    padding: 1rem;
+
+    transition: transform 300ms;
+}
+
+.main-link-button:visited {
+    color: white;
+}
+
+.main-link-button:hover {
+    transform: scale(105%);
+}
+
 /* Message card */
 
 .message-container {
-    border: 2px solid black;
+    min-width: 80%;
+    border-radius: 1rem;
+    border: 2px solid darkcyan;
+    background-color: lightblue;
+    padding: 0rem 1rem 1rem 1rem;
 }
 
 .message-header {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Form view */
+
+.form-content-container {
+    max-width: 325px;
+    width: 325px;
+}
+
+.form-container {
+    background-color: rgb(228, 228, 228);
+    padding: 1rem;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+input, textarea {
+    padding: 0 0.5rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
 }
