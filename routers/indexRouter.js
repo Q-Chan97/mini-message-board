@@ -16,7 +16,7 @@ const messages = [
 ]
 
 indexRouter.get("/", (req, res) => {
-    res.render("index", {title: "Mini Message Board", messages: messages});
+    res.render("index", {messages: messages});
 });
 
 export default indexRouter;
