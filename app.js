@@ -1,5 +1,6 @@
 import express from "express";
 import indexRouter from "./routers/indexRouter.js";
+import newRouter from "./routers/newRouter.js";
 
 import path from "node:path";
 
@@ -16,6 +17,7 @@ const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
 app.use("/", indexRouter);
+app.use("/new", newRouter);
 
 app.listen(PORT, (error) => {
     if (error) throw error;
