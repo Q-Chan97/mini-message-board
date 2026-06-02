@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1><%= title %></h1>
-    <% messages.forEach((message) => { %>
+  <div class="page-container">
+    <header class="header-container">
+      <h1>Mini Message Board</h1>
+      <h2>Share a message with everyone!</h2>
+    </header>
+    <main class="main-container">
+      <a class="main-link-button" href="/new">+ New Message</a>
+      <% messages.forEach((message) => { %>
         <article class="message-container">
           <div class="message-header">
             <h3><%= message.user %></h3>
             <h4><%= message.added %></h4>
-          </div>  
+          </div>
           <p><%= message.text %></p>
         </article>
-    <% }) %>
+      <% }) %>
+    </main>
+  </div>
 </body>
 </html>
