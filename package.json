@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Q-Chan97/mini-message-board#readme",
   "dependencies": {
+    "date-fns": "^4.4.0",
     "ejs": "^6.0.1",
     "express": "^5.2.1"
   }
