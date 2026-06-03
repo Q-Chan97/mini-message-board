@@ -20,4 +20,10 @@ indexRouter.get("/", (req, res) => {
     res.render("index", {messages: messages});
 });
 
+indexRouter.post("/new", (req, res) => {
+    const { messageText, nameText } = req.body;
+    messages.push({ text: messageText, user: nameText, added: formatDate() });
+    res.redirect("/");
+});
+
 export default indexRouter;
