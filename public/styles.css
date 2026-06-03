@@ -181,3 +181,20 @@ input, textarea {
 .cancel-button {
     background-color: gray;
 }
+
+/* Error */
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.pic-container {
+    width: 200px;
+}
+
+.pic-container img {
+    width: 100%;
+}
