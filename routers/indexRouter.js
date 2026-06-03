@@ -1,5 +1,5 @@
 import Router from "express";
-import { formatDate, createId } from "../controllers/indexController.js";
+import { formatDate, createId, getMessageById } from "../controllers/indexController.js";
 
 const indexRouter = Router();
 
@@ -27,5 +27,7 @@ indexRouter.post("/new", (req, res) => {
     messages.push({ id: createId(), text: messageText, user: nameText, added: formatDate() });
     res.redirect("/");
 });
+
+indexRouter.get("/details/:messageId", getMessageById(messages));
 
 export default indexRouter;
