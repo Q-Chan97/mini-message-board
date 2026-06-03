@@ -21,6 +21,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", indexRouter);
 app.use("/new", newRouter);
 
+// Unmatched routes
+app.use((req, res) => {
+    res.status(404).render("error");
+})
+
+//Error handler
 app.use((err, req, res, next) => {
     console.error(err);
     res.status(err.status || 500).render("error");
