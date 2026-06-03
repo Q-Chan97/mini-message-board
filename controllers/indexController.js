@@ -5,3 +5,9 @@ export function formatDate() {
 
     return timestamp;
 }
+
+let currentId = 0;
+
+export function createId() {
+    return ++currentId;
+}
