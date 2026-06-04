@@ -1,5 +1,5 @@
 import Router from "express";
-import { formatDate, createId, getMessageById, checkProfanity } from "../controllers/indexController.js";
+import { createId, getMessageById, checkProfanity } from "../controllers/indexController.js";
 
 const indexRouter = Router();
 
@@ -8,13 +8,13 @@ const messages = [
         id: createId(),
         text: "Hey there",
         user: "Amando",
-        added: formatDate(),
+        added: new Date(),
     },
     {
         id: createId(),
         text: "Hello world!",
         user: "Charles",
-        added: formatDate(),
+        added: new Date(),
     },
 ]
 
@@ -28,7 +28,7 @@ indexRouter.post("/new", (req, res) => {
     const filteredMessage = checkProfanity(messageText);
     const filteredName = checkProfanity(nameText);
 
-    messages.push({ id: createId(), text: filteredMessage, user: filteredName, added: formatDate() });
+    messages.push({ id: createId(), text: filteredMessage, user: filteredName, added: new Date() });
     res.redirect("/");
 });
 
