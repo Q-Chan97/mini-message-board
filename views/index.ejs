@@ -20,7 +20,7 @@
         <article class="message-container">
           <div class="message-header">
             <h3><%= message.user %></h3>
-            <h4><%= message.added %></h4>
+            <h4 data-timestamp="<%= message.added.toISOString() %>"></h4>
           </div>
           <p><%= message.text %></p>
           <a class="open-button" href="/details/<%= message.id %>">Open</a>
@@ -28,5 +28,18 @@
       <% }) %>
     </main>
   </div>
+  <script>
+    // Renders local date client-side
+    document.querySelectorAll("h4").forEach((element) => {
+      const date = new Date(element.dataset.timestamp);
+      element.textContent = date.toLocaleString("en-us", {
+        hour: "numeric",
+        minute: "2-digit",
+        month:"numeric",
+        day:"2-digit",
+        year:"2-digit",
+      });
+    })
+  </script>
 </body>
 </html>
