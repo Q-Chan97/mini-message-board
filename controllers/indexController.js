@@ -1,4 +1,3 @@
-import { format } from "date-fns";
 import { RegExpMatcher, TextCensor, englishDataset, englishRecommendedTransformers } from "obscenity";
 
 const matcher = new RegExpMatcher({
@@ -6,12 +5,6 @@ const matcher = new RegExpMatcher({
     ...englishRecommendedTransformers,
 });
 const censor = new TextCensor();
-
-export function formatDate() {
-    const timestamp = format(new Date(), "h:mmaaa M/dd/yy ");
-
-    return timestamp;
-}
 
 let currentId = 0;
 
