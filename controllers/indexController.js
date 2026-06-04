@@ -1,4 +1,11 @@
 import { format } from "date-fns";
+import { RegExpMatcher, TextCensor, englishDataset, englishRecommendedTransformers } from "obscenity";
+
+const matcher = new RegExpMatcher({
+    ...englishDataset.build(),
+    ...englishRecommendedTransformers,
+});
+const censor = new TextCensor();
 
 export function formatDate() {
     const timestamp = format(new Date(), "h:mmaaa M/dd/yy ");
@@ -22,4 +29,10 @@ export function getMessageById(messages) {
 
         res.render("details", { message })
     }
+}
+
+export function checkProfanity(text) {
+    const matches = matcher.getAllMatches(text);
+    const filteredText = censor.applyTo(text, matches);
+    return filteredText;
 }
