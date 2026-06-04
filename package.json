@@ -24,6 +24,7 @@
     "date-fns": "^4.4.0",
     "ejs": "^6.0.1",
     "express": "^5.2.1",
+    "express-validator": "^7.3.2",
     "obscenity": "^0.4.6"
   }
 }
