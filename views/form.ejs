@@ -14,15 +14,16 @@
             <h1>What's Your Message?</h1>
             <h2>Share it with the world</h2>
         </header>
+        <%- include("./partials/error.ejs") %>
         <article class="form-content-container">
             <form class="form-container" method="POST" action="/new" >
                 <div class="input-container">
                     <label for="nameText">Name:</label>
-                    <input type="text" name="nameText" id="nameText" maxlength="18" placeholder="Name (Max 18 characters)">
+                    <input type="text" name="nameText" id="nameText" placeholder="Name (Max 18 characters)">
                 </div>
                 <div class="input-container">
                     <label for="messageText">Message:</label>
-                    <textarea type="text" name="messageText" id="messageText" placeholder="Write your message here..."></textarea>
+                    <textarea type="text" name="messageText" id="messageText" placeholder="Write your message here (Max 280 characters)"></textarea>
                 </div>
                 <div class="buttons-container">
                     <a class="cancel-button" href="/">Cancel</a>
