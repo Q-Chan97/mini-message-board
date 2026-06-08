@@ -19,10 +19,10 @@
       <% messages.forEach((message) => { %>
         <article class="message-container">
           <div class="message-header">
-            <h3><%= message.user %></h3>
+            <h3><%= message.username %></h3>
             <h4 data-timestamp="<%= message.added.toISOString() %>"></h4>
           </div>
-          <p><%= message.text %></p>
+          <p><%= message.message %></p>
           <a class="open-button" href="/details/<%= message.id %>">Open</a>
         </article>
       <% }) %>
