@@ -14,6 +14,7 @@ This project is meant to showcase my understanding of:
 The technologies I used for this project are: 
    - Express
    - EJS
+   - PostgreSQL
 
 This project features:
    - A message board where users can submit and view messages
@@ -21,3 +22,4 @@ This project features:
    - Dynamic routing with parameterized URLs
    - Static asset serving
    - 404 and error handling middleware
+   - SQL database querying
