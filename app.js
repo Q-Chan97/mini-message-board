@@ -1,6 +1,5 @@
 import express from "express";
 import indexRouter from "./routers/indexRouter.js";
-import newRouter from "./routers/newRouter.js";
 
 import path from "node:path";
 
@@ -19,7 +18,6 @@ app.use(express.static(assetsPath));
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
-app.use("/new", newRouter);
 
 // Unmatched routes
 app.use((req, res) => {
