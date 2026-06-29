@@ -1,7 +1,5 @@
 # mini-message-board
 
-# Shopping Cart
-
 This is a mini message board project created as part of The Odin Project's NodeJS course. 
 
 This project is meant to showcase my understanding of:
